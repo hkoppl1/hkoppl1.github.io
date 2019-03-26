@@ -6,6 +6,11 @@ let myTriangle = L.polygon([
   [48.1173, -1.6778],
   [47.399706, .0772171]
 ]).addTo(myLeaf);
+var latlngs = [
+    [45.745805, 4.848651],
+    [44.816069, -0.560720]
+];
+var polyline = L.polyline(latlngs, {color: 'red'}).addTo(myLeaf);
 
 parisPoint.bindPopup('Paris, France')
 myTriangle.bindPopup('Rouen, Rennes, and Tours')
