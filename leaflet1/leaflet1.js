@@ -14,3 +14,4 @@ var polyline = L.polyline(latlngs, {color: 'red'}).addTo(myLeaf);
 
 parisPoint.bindPopup('Paris, France')
 myTriangle.bindPopup('Rouen, Rennes, and Tours')
+polyline.bindPopup('Lyon to Bordeaux')
