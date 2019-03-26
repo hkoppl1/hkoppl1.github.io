@@ -1,4 +1,4 @@
-let myLeaf = L.map('leaflet1').setView([47.252931, 2.461270], 5)
+let myLeaf = L.map('leaflet2').setView([47.252931, 2.461270], 5)
 L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png').addTo(myLeaf)
 let parisPoint = L.marker([48.85, 2.35]).addTo(myLeaf)
 let myTriangle = L.polygon([
