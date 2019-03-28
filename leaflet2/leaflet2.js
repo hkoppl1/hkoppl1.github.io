@@ -12,12 +12,12 @@ L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_
   transparent: true,
   attribution: 'NOAA'
 }).addTo(myLeaf)
-L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteoceanhydro_shortduration_hazards_watches_time/MapServer/WMSServer?', {
-  layers: '1',
-  format: 'image/png',
-  transparent: true,
-  attribution: 'NOAA'
-}).addTo(myLeaf)
+// L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteoceanhydro_shortduration_hazards_watches_time/MapServer/WMSServer?', {
+//   layers: '1',
+//   format: 'image/png',
+//   transparent: true,
+//   attribution: 'NOAA'
+// }).addTo(myLeaf)
 L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/analysis_ocean_sfc_sst_time/MapServer/WMSServer?', {
   layers: '1',
   format: 'image/png',
