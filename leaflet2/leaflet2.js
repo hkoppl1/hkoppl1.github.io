@@ -1,5 +1,5 @@
-let myLeaf = L.map('leaflet2').setView([39.0119, -98.4842], 4)
-L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png').addTo(myLeaf)
+let weatherMap = L.map('weatherMap').setView([39.0119, -98.4842], 4)
+L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png').addTo(weatherMap)
 // L.tileLayer.wms('http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi', {
 //   layers: 'nexrad-n0r-900913',
 //   format: 'image/png',
@@ -11,7 +11,7 @@ L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_
   format: 'image/png',
   transparent: true,
   attribution: 'NOAA'
-}).addTo(myLeaf)
+}).addTo(weatherMap)
 // L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteoceanhydro_shortduration_hazards_watches_time/MapServer/WMSServer?', {
 //   layers: '1',
 //   format: 'image/png',
@@ -23,4 +23,4 @@ L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/analysis_oce
   format: 'image/png',
   transparent: true,
   attribution: 'NOAA, Iowa State University'
-}).addTo(myLeaf)
+}).addTo(weatherMap)
