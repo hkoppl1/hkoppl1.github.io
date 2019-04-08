@@ -4,18 +4,20 @@ let foodTruckZonesUrl = 'https://opendata.arcgis.com/datasets/33f825353da04a5fbb
 jQuery.getJSON(foodTruckZonesUrl, function (data) {
   let truckStyle = function (feature) {
     let foodTruckType = feature.properties.Zone_Code // get the current state's Median Age attribute
-    let truckColor = 'gold' // let the initial color be a darker green
-    if ( foodTruckType == 'P' ) { truckColor = 'purple' } // if the state's median age is less than the average, color it a lighter green
+    let truckColor = 'purple' // let the initial color be a darker green
+    if ( foodTruckType == 'P' ) { truckColor = 'gold' } // if the state's median age is less than the average, color it a lighter green
     return {
       color: truckColor, //use the color variable above for the value
-      weight: 2,
-      fillOpacity: 0.35
+      weight: 1.5,
+      stroke: true,
+      lineJoin: 'round',
+      fillOpacity: 0.3
     }
   }
   let onEachFeature = function (feature, layer) {
-    let name = feature.properties.STATE_NAME
-    let age = feature.properties.MED_AGE
-    layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+    let zone = feature.properties.Zone_Code
+    let permitted_or_franchise = feature.properties.Auth
+    layer.bindPopup('Zone Code is' + ': ' + zone + '<br>Zone Type is' + ': ' + permitted_or_franchise)
   }
   let geojsonOptions = {
     style: truckStyle,
