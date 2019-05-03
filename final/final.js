@@ -1,5 +1,5 @@
 let restaurants = L.map('restaurants').setView([29.983565, -90.047463], 12)
-L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png').addTo(restaurants)
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png').addTo(restaurants)
 let restaurantsUrl = 'https://opendata.arcgis.com/datasets/62501c695c614d1c99aaf2b113fca257_0.geojson'
 jQuery.getJSON(restaurantsUrl, function (data) {
   let restaurantStyle = function (feature) {
