@@ -5,16 +5,15 @@ jQuery.getJSON(restaurantsUrl, function (data) {
   let restaurantStyle = function (feature) {
     let businessType = feature.properties.BusinessType
     let restaurantColor = 'purple'
-    if (businessType == '1105 - FULL SVC RESTAURANTS (TABLE SERVICE)' ) {restaurantColor = 'gold' }
+    if (businessType == '1105 - FULL SVC RESTAURANTS (TABLE SERVICE) (934)' ) {restaurantColor = 'gold' }
     return {
       color: restaurantColor,
-      weight: 1.5
     }
   }
   let onEachFeature = function (feature, layer) {
     let name = feature.properties.BusinessName
     let type = feature.properties.BusinessType
-    layer.bindPopup('Restaurant Name is' + ': ' + name + '<br>Restaurant Type is' + ': ' + type)
+    layer.bindPopup('Restaurant Name' + ': ' + name + '<br>Restaurant Type' + ': ' + type)
   }
   let geojsonOptions = {
     style: restaurantStyle,
